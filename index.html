@@ -24,7 +24,11 @@
 		function addElement() {
 			var el = $('<li>');
 			el.dblclick(function() {
-				$(this).slideUp();
+			$(this).text(":(").css({
+				"color": "gray",
+				"font-size": "14px"
+				});
+			$(this).slideUp();
 			});
 			var elColor = prompt("Hex color:");
 			var c = elColor.charAt(0);
@@ -44,8 +48,13 @@
 			}
 		};
 		$('.items li').dblclick(function() {
+			$(this).text(":(").css({
+				"color": "gray",
+				"font-size": "14px"
+				});
 			$(this).slideUp();
 		});
+
 		$('.items').sortable();
 	</script>
 </html>

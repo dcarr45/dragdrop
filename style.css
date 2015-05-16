@@ -42,3 +42,7 @@ ul li {
 ul li:hover {
   cursor: pointer;
 }
+
+ul li:active {
+  opacity: .6;
+}
