@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css" />
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+    </head>
+
+    <body>
+    	<div id="container">
+	    	<ul class="items">
+	    		<li id="one"></li>
+	    		<li id="two"></li>
+	    		<li id="three"></li>
+	    		<li id="four"></li>
+	    		<li id="five"></li>
+	    	</ul>
+	    </div>
+	</body>
+
+	<button onclick="addElement()">Add Box</button>
+
+	<script>
+		function addElement() {
+			var el = $('<li>');
+			el.dblclick(function() {
+				$(this).slideUp();
+			});
+			var elColor = prompt("Hex color:");
+			var c = elColor.charAt(0);
+			if (c !== '#') {
+				elColor = '#' + elColor;
+			}
+			el.css("background-color", elColor);
+			$('.items').append(el.text(elColor).css({
+				"color": "gray",
+				"font-size": "14px"
+			}));
+		}
+
+		window.onload = function() {
+			document.onselectstart = function() {
+				return false;
+			}
+		};
+		$('.items li').dblclick(function() {
+			$(this).slideUp();
+		});
+		$('.items').sortable();
+	</script>
+</html>

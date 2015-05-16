@@ -1,0 +1,44 @@
+ul {
+  position: absolute;
+  top: 25px;
+  left: 50%;
+  margin-left: -105px;
+  padding: 0;
+}
+
+ul li {
+  list-style-type: none;
+  height: 50px;
+  width: 200px;
+  background-color: #f9f9f9;
+  border-style: solid;
+  border-width: 2px;
+  border-color: black;
+  margin-top: 1px;
+  margin-bottom: 1px;
+  border-radius: 7px;
+}
+
+#one {
+  background-color: #44cc8a;
+}
+
+#two {
+  background-color: #a4ce3a;
+}
+
+#three {
+  background-color: #ffb632;
+}
+
+#four {
+  background-color: #ff782e;
+}
+
+#five {
+  background-color: #fd4338;
+}
+
+ul li:hover {
+  cursor: pointer;
+}
